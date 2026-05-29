@@ -1,4 +1,4 @@
-  :root {
+:root {
     /* Checkbox brand palette — matched to triage page so the campaign reads as a set */
     --brand-green: #11D281;
     --brand-green-dark: #0BB870;
@@ -1072,7 +1072,7 @@
     background: white;
     border-radius: 18px;
     box-shadow: 0 30px 80px rgba(14,14,14,0.3);
-    max-width: 940px;
+    max-width: 560px;
     width: 100%;
     max-height: calc(100vh - 48px);
     overflow: hidden;
@@ -1103,100 +1103,29 @@
     transform: scale(1.05);
   }
   .demo-modal-grid {
-    display: grid;
-    grid-template-columns: 0.95fr 1.1fr;
-    min-height: 560px;
+    display: block;
+    overflow-y: auto;
     max-height: calc(100vh - 48px);
-    overflow: hidden;
   }
   .demo-modal-left {
-    background: var(--hero-grad);
-    padding: 44px 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    overflow-y: auto;
-  }
-  .demo-modal-left .demo-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #DCFAEC;
-    color: var(--brand-green-deep);
-    font-size: 11.5px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 5px 11px;
-    border-radius: 999px;
-    width: max-content;
-  }
-  .demo-modal-left .demo-eyebrow::before {
-    content: "";
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--brand-green);
+    padding: 36px 40px 20px;
   }
   .demo-modal-left h3 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.015em;
-    line-height: 1.15;
+    line-height: 1.2;
     color: var(--ink);
-    margin: 0;
+    margin: 0 0 8px;
   }
   .demo-modal-left > p {
     font-size: 15px;
-    line-height: 1.55;
-    color: var(--ink-soft);
+    line-height: 1.5;
+    color: var(--ink-mid);
     margin: 0;
   }
-  .demo-perks {
-    list-style: none;
-    padding: 0;
-    margin: 4px 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-  }
-  .demo-perks li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14.5px;
-    color: var(--ink-soft);
-    font-weight: 500;
-  }
-  .demo-perks li svg {
-    color: var(--brand-green-deep);
-    flex-shrink: 0;
-  }
-  .demo-trust {
-    margin-top: auto;
-    padding-top: 18px;
-    border-top: 1px solid rgba(14,14,14,0.08);
-    font-size: 12.5px;
-    color: var(--ink-mid);
-    line-height: 1.55;
-  }
-  .demo-trust b { color: var(--ink); font-weight: 600; }
   .demo-modal-right {
-    padding: 44px 40px;
-    overflow-y: auto;
-    background: white;
-  }
-  .demo-modal-right-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 0 0 6px;
-    letter-spacing: -0.005em;
-  }
-  .demo-modal-right-sub {
-    font-size: 13px;
-    color: var(--muted);
-    margin: 0 0 22px;
-    line-height: 1.5;
+    padding: 8px 40px 36px;
   }
   /* Minimal HubSpot form polish so it matches the page */
   .demo-modal-right .hs-form-field { margin-bottom: 14px; }
@@ -1282,16 +1211,10 @@
       height: 100vh;
       border-radius: 0;
     }
-    .demo-modal-grid {
-      grid-template-columns: 1fr;
-      min-height: 0;
-      max-height: none;
-      overflow-y: auto;
-    }
-    .demo-modal-left { padding: 32px 22px 24px; gap: 14px; }
+    .demo-modal-grid { max-height: none; }
+    .demo-modal-left { padding: 28px 22px 16px; }
     .demo-modal-left h3 { font-size: 22px; }
-    .demo-modal-right { padding: 28px 22px 40px; }
-    .demo-trust { margin-top: 6px; padding-top: 14px; }
+    .demo-modal-right { padding: 4px 22px 32px; }
     .demo-modal-close { top: 12px; right: 12px; }
   }
 
